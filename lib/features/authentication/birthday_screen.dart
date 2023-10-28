@@ -100,7 +100,6 @@ class BirthdayScreen extends HookWidget {
       ),
       bottomNavigationBar: BottomAppBar(
         height: 300,
-        surfaceTintColor: Colors.transparent,
         color: Colors.white,
         child: CupertinoDatePicker(
           mode: CupertinoDatePickerMode.date,

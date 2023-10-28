@@ -13,12 +13,12 @@ class LoginScreen extends StatelessWidget {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => SignUpScreen(),
+        builder: (context) => const SignUpScreen(),
       ),
     );
   }
 
-  void _onTapEmail(BuildContext context) {
+  void _onTapEmailLogin(BuildContext context) {
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               Gaps.v80,
-              Text(
+              const Text(
                 'Log in to TikTok',
                 style: TextStyle(
                   fontSize: Sizes.$24,
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Gaps.v20,
-              Text(
+              const Text(
                 'Manage your account, check notifications, comment on videos, and more.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -56,12 +56,12 @@ class LoginScreen extends StatelessWidget {
               ),
               Gaps.v40,
               AuthButton(
-                icon: FaIcon(FontAwesomeIcons.user),
+                icon: const FaIcon(FontAwesomeIcons.user),
                 label: 'Use email & password',
-                onTap: () => _onTapEmail(context),
+                onTap: () => _onTapEmailLogin(context),
               ),
               Gaps.v16,
-              AuthButton(
+              const AuthButton(
                 icon: FaIcon(FontAwesomeIcons.apple),
                 label: 'Continue with Apple',
               ),
@@ -71,13 +71,10 @@ class LoginScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomAppBar(
         height: Sizes.$32 * 2 + Sizes.$20,
-        color: Colors.grey.shade50,
-        surfaceTintColor: Colors.transparent,
-        padding: EdgeInsets.zero,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Dont\'t have an account?'),
+            const Text('Dont\'t have an account?'),
             Gaps.h5,
             GestureDetector(
               onTap: () => onTapSignUp(context),

@@ -7,9 +7,11 @@ class FormButton extends StatelessWidget {
     super.key,
     required this.isEnabled,
     this.onTap,
+    this.label = 'next',
   });
 
   final bool isEnabled;
+  final String label;
   final VoidCallback? onTap;
 
   @override
@@ -38,7 +40,7 @@ class FormButton extends StatelessWidget {
               color: isEnabled ? Colors.white : Colors.grey.shade400,
               fontWeight: FontWeight.w600,
             ),
-            child: const Text('Next'),
+            child: Text(label),
           ),
         ),
       ),
